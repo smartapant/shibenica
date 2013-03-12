@@ -1,9 +1,11 @@
+require './lib/game.rb'
+require './lib/shibenica.rb'
 
 puts "Let's play shibenica!"
-dictionary=Dictionaty.new
-player=Player.new("Player 1")
-shibenica=Shibenica.new('word')
-game=Game.new(player,shibenica)
+#dictionary=Dictionaty.new
+#player=Player.new("Player 1")
+shibenica=Shibenica.new('yolo')
+game=Game.new(shibenica)
 
 until game.over?
   puts "#{shibenica.show}\n"
@@ -11,4 +13,5 @@ until game.over?
   game.turn(gets.chomp)
 end
 
+puts "#{shibenica.show}\n"
 puts "#{game.result}"
