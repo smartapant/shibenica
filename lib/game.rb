@@ -1,6 +1,5 @@
 class Game
   def initialize(shibenica)
-    #@player=player
     @shibenica=shibenica
     @over=false
   end
@@ -21,7 +20,7 @@ class Game
     if @shibenica.word == '?'*@shibenica.word.length
       "U won."
     else
-      "U lost."
+      "U lost. It was '#{@shibenica.word_copy}'."
     end
   end
 end
