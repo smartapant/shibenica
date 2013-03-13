@@ -4,7 +4,7 @@ class Dictionary
   end
 
   def get
-
-    @dictionary[rand(0...@dictionary.length)]
+  @dictionary[rand(0...@dictionary.length)]
   end
+
 end
