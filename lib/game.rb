@@ -14,11 +14,11 @@ class Game
   end
 
   def over?
-  @over=true if @shibenica.word == "" or @shibenica.guy == []
+  @over=true if @shibenica.word == '?'*@shibenica.word.length or @shibenica.guy == []
   end
 
   def result
-    if @shibenica.word == ""
+    if @shibenica.word == '?'*@shibenica.word.length
       "U won."
     else
       "U lost."

@@ -2,7 +2,7 @@ class Shibenica
   attr_reader :guy, :shib, :field, :word
   def initialize(word)
     @word=word
-    @field=" _ "*@word.length
+    @field="-"*@word.length
     @guy=[ "()" , "||" , "/" , "\\" , "/" , "\\" ]
     @shibenica="  _________
   #{@guy[0]}        |
@@ -16,8 +16,8 @@ class Shibenica
   def put(letter)
     while @word.index(letter)
       id=@word.index(letter)
-      @field[id+1] = "#{letter}"
-      @word.slice!(id)
+      @field[id] = "#{letter}"
+      @word[id] = '?'
     end
   end
 
